@@ -1,0 +1,44 @@
+.search-bar-container { 
+    position: relative; 
+    max-width: 600px; 
+    margin: 0 auto; 
+}
+
+.search-input-wrapper input { 
+    width: 100%; 
+    padding: 15px 20px; 
+    font-size: 16px; 
+    border-radius: 50px; 
+    border: 1px solid #ccc; 
+    box-sizing: border-box; 
+}
+
+.suggestions-dropdown { 
+    position: absolute; 
+    background: white; 
+    border: 1px solid #ddd; 
+    border-radius: 8px; 
+    list-style: none; 
+    padding: 10px 0; 
+    margin: 8px 0 0 0; 
+    width: 100%; 
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1); 
+    z-index: 1000;
+    text-align: left;
+}
+
+.suggestions-dropdown li { 
+    padding: 10px 20px; 
+    cursor: pointer; 
+    display: flex; 
+    align-items: center; 
+    gap: 15px; 
+}
+
+.suggestions-dropdown li:hover { 
+    background-color: #f0f0f0; 
+}
+
+.icon-box { 
+    font-size: 18px; 
+}

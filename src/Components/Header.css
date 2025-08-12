@@ -1,0 +1,59 @@
+.app-header { 
+    background: white; 
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05); 
+}
+
+.header-primary, .header-secondary { 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    padding: 0 2rem; 
+}
+
+.header-primary { 
+    padding-top: 1rem; 
+    padding-bottom: 1rem; 
+    border-bottom: 1px solid #eee; 
+}
+
+.header-logo { 
+    display: flex; 
+    align-items: center; 
+    gap: 10px; 
+    font-weight: bold; 
+}
+
+.header-logo img { 
+    height: 30px; 
+}
+
+.header-nav-main { 
+    display: flex; 
+    gap: 2rem; 
+    align-items: center; 
+}
+
+.user-profile { 
+    background-color: #ddd; 
+    color: #333; 
+    width: 32px; 
+    height: 32px; 
+    border-radius: 50%; 
+    display: grid; 
+    place-items: center; 
+    font-weight: bold; 
+}
+
+.header-nav-tabs button { 
+    padding: 1rem 1.5rem; 
+    border: none; 
+    background: none; 
+    cursor: pointer; 
+    border-bottom: 3px solid transparent; 
+}
+
+.header-nav-tabs button.active { 
+    border-bottom-color: #0056b3; 
+    font-weight: bold; 
+    color: #0056b3; 
+}
