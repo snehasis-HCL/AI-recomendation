@@ -76,3 +76,55 @@
     margin-left: 10px; 
     cursor: pointer; 
 }
+
+/* Add these new styles to the end of src/components/ChatPage.css */
+
+.chat-messages {
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Adds space between bubbles */
+}
+
+/* Blue bubble for the user's initial query */
+.user-query-bubble {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 20px;
+    align-self: center; /* Puts it in the middle */
+    margin-bottom: 10px;
+    font-weight: 500;
+}
+
+/* Grey structured bubble for the API response */
+.message.api-structured {
+    background-color: #f1f1f1;
+    color: #333;
+    border-radius: 12px;
+    padding: 15px;
+    align-self: flex-start;
+    text-align: left;
+    max-width: 95%;
+    line-height: 1.5;
+}
+
+.message.api-structured p {
+    margin: 0 0 10px 0;
+}
+
+.message.api-structured p:last-child {
+    margin-bottom: 0;
+}
+
+/* Style for the Send button */
+.chat-input-area button {
+    background: #007bff;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    font-size: 16px;
+    cursor: pointer;
+    min-width: 40px;
+}
