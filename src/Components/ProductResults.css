@@ -14,3 +14,29 @@
 .add-to-cart-btn { background-color: #f0f0f0; border: 1px solid #ccc; width: 30px; height: 30px; border-radius: 50%; font-size: 20px; cursor: pointer; }
 .view-more-container { text-align: center; margin-top: 30px; }
 .view-more-btn { padding: 10px 30px; border: 1px solid #0056b3; color: #0056b3; background: white; border-radius: 20px; cursor: pointer; }
+/* Add this to the end of src/components/ProductResults.css */
+
+.recommended-badge {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: #28a745; /* Green background */
+    color: white;
+    padding: 4px 8px;
+    font-size: 12px;
+    font-weight: bold;
+    border-radius: 4px;
+    z-index: 2; /* Ensures it's above the other badge if they overlap */
+}
+
+/* Adjust the other badge to not overlap */
+.novo-approved-badge {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    padding: 4px 8px;
+    font-size: 12px;
+    border-radius: 4px; 
+}

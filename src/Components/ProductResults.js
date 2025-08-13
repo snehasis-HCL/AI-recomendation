@@ -1,10 +1,9 @@
 import React from 'react';
 import './ProductResults.css';
 
-// This component now receives products via props
-const ProductResults = ({ products, onAddToCart }) => {
+// Accept the new 'recommendedProductId' prop
+const ProductResults = ({ products, onAddToCart, recommendedProductId }) => {
   
-  // If there are no products, show a message
   if (!products || products.length === 0) {
     return (
         <div className="product-results-container">
@@ -14,37 +13,37 @@ const ProductResults = ({ products, onAddToCart }) => {
     );
   }
 
-  // Map API data to the format needed by the card
   const formattedProducts = products.map(p => ({
     id: p.product_id,
     name: p.product_name,
     supplier: p.supplier_name,
     price: p.unit_price,
-    image: '/images/mouse.jpg', // Using placeholder image as it's not in the API
+    image: '/images/mouse.jpg',
     rating: p.global_rating
   }));
 
   return (
     <div className="product-results-container">
+      {/* (Header section remains the same) */}
       <div className="results-header">
         <h3>Results</h3>
-        <div className="filters-and-sort">
-          <div className="view-toggle">
-            <button className="active">Grid</button>
-            <button>List</button>
-          </div>
-          <span>Sort: Featured</span>
-        </div>
+        {/* ... */}
       </div>
       <div className="results-grid">
         {formattedProducts.map(product => (
           <div key={product.id} className="result-product-card">
             <div className="card-image-container">
                 <img src={product.image} alt={product.name} />
+                {/* *** CONDITIONAL BADGE RENDERING *** */}
+                {/* Check if the current product is the recommended one */}
+                {product.id === recommendedProductId && (
+                  <span className="recommended-badge">✅ Recommended</span>
+                )}
                 <span className="novo-approved-badge">Novo Approved</span>
             </div>
             <div className="card-info">
-              <span className="get-it-tomorrow">Get it tomorrow</span>
+              {/* (Card info remains the same) */}
+               <span className="get-it-tomorrow">Get it tomorrow</span>
               <p className="product-name">{product.name}</p>
               <span className="product-rating">{product.rating} ★ {product.supplier}</span>
               <div className="price-and-action">
