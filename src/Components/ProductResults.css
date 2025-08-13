@@ -1,0 +1,16 @@
+.product-results-container { padding: 20px; }
+.results-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; }
+.results-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 20px; }
+.result-product-card { border: 1px solid #e0e0e0; border-radius: 8px; background: white; }
+.card-image-container { position: relative; }
+.card-image-container img { width: 100%; height: 180px; object-fit: cover; border-top-left-radius: 8px; border-top-right-radius: 8px; }
+.novo-approved-badge { position: absolute; top: 10px; right: 10px; background: rgba(0, 0, 0, 0.6); color: white; padding: 4px 8px; font-size: 12px; border-radius: 4px; }
+.card-info { padding: 15px; }
+.get-it-tomorrow { font-size: 12px; color: green; font-weight: bold; }
+.product-name { font-size: 14px; margin: 5px 0; height: 40px; }
+.product-rating { font-size: 13px; color: #555; }
+.price-and-action { display: flex; justify-content: space-between; align-items: center; margin-top: 10px; }
+.product-price { font-weight: bold; font-size: 16px; }
+.add-to-cart-btn { background-color: #f0f0f0; border: 1px solid #ccc; width: 30px; height: 30px; border-radius: 50%; font-size: 20px; cursor: pointer; }
+.view-more-container { text-align: center; margin-top: 30px; }
+.view-more-btn { padding: 10px 30px; border: 1px solid #0056b3; color: #0056b3; background: white; border-radius: 20px; cursor: pointer; }

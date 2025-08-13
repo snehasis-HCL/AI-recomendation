@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 import Header from './Header';
 import './ChatPage.css';
+import ContextualPanel from './ContextualPanel';
+
  
 const ChatPage = () => {
   const location = useLocation();
@@ -12,6 +14,8 @@ const ChatPage = () => {
  
   const getChatResponse = async (query) => {
     setIsLoading(true);
+    const storedUser = await window.localStorage.getItem("user");
+    console.log(storedUser);
     try {
       const response = await fetch('http://20.115.96.172:8001/ask_chat', {
         method: 'POST',
@@ -19,7 +23,7 @@ const ChatPage = () => {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify({
-          user_id: "U002",
+          user_id: storedUser.user_id || 'U002',
           user_query: query,
         }),
       });
@@ -59,6 +63,7 @@ const ChatPage = () => {
     }
   };
  
+  console.log(messages);
   return (
 <div>
 <Header />
@@ -91,9 +96,8 @@ const ChatPage = () => {
 </div>
 </div>
 <div className="content-panel-right">
-<h2>Contextual Information</h2>
-<p>Relevant product details, images, or documents would appear here based on the chat conversation.</p>
-</div>
+                <ContextualPanel />
+            </div>
 </div>
 </div>
   );

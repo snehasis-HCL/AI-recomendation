@@ -1,0 +1,9 @@
+.order-confirmation-container { display: flex; align-items: center; justify-content: center; height: 100%; text-align: center; }
+.confirmation-content { max-width: 450px; }
+.success-icon { width: 60px; height: 60px; background: #28a745; color: white; font-size: 40px; border-radius: 50%; display: grid; place-items: center; margin: 0 auto 20px; }
+h2 { font-size: 24px; margin-bottom: 10px; }
+p { color: #555; line-height: 1.5; }
+.confirmation-actions { display: flex; justify-content: center; gap: 15px; margin-top: 30px; }
+.view-orders-btn, .continue-browsing-btn { padding: 10px 20px; border-radius: 20px; font-size: 14px; cursor: pointer; }
+.view-orders-btn { background: #0056b3; color: white; border: none; }
+.continue-browsing-btn { background: white; color: #0056b3; border: 1px solid #0056b3; }
